@@ -1,0 +1,59 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 435px;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.plan {
+  font-size: 18px;
+  margin: 30px 0px 22px;
+  /* color: hsl(233, 13%, 49%); */
+}
+
+.card span:first-of-type {
+  font-size: 43px;
+  /* color: hsl(232, 13%, 33%); */
+}
+
+.priceWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price {
+  font-size: 68px;
+  /* color: hsl(232, 13%, 33%); */
+}
+
+.info {
+  margin: 25px 0px 32px;
+  width: 85%;
+}
+
+/* .info p:first-child {
+  border-top: 1px solid hsl(233, 13%, 49%, 0.5);
+} */
+
+.info p {
+  /* border-bottom: 1px solid hsl(233, 13%, 49%, 0.5); */
+  font-size: 15px;
+  text-align: center;
+  padding: 15px;
+  /* color: hsl(233, 13%, 49%); */
+}
+
+.card button {
+  /* color: hsl(0, 0%, 100%); */
+  width: 85%;
+  padding: 12px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  border: none;
+  border-radius: 8px;
+  letter-spacing: 2.5px;
+  font-size: 12px;
+}

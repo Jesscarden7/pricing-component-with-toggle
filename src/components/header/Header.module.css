@@ -1,0 +1,20 @@
+.header {
+  text-align: center;
+  margin: 40px 0px 28px;
+}
+
+.header h1 {
+  color: hsl(233, 13%, 49%);
+}
+
+.toggleWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 40px 0px 20px;
+}
+
+.toggleWrapper p {
+  color: hsl(234, 14%, 74%);
+  font-size: 15px;
+}
