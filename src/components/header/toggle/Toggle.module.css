@@ -47,3 +47,32 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+@media (min-width: 1440px) {
+  .switch {
+    width: 44px;
+    height: 24px;
+  }
+
+  .slider {
+    height: 24px;
+    width: 43px;
+  }
+
+  .slider:hover {
+    background: hsl(236, 72%, 79%);
+  }
+
+  .slider:before {
+    height: 17px;
+    width: 17px;
+    left: 3px;
+    bottom: 4px;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+}

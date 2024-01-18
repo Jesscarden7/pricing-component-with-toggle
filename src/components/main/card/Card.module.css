@@ -1,4 +1,5 @@
-.card {
+.card,
+.middleCard {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +14,8 @@
   /* color: hsl(233, 13%, 49%); */
 }
 
-.card span:first-of-type {
+.card span:first-of-type,
+.middleCard span:first-of-type {
   font-size: 43px;
   /* color: hsl(232, 13%, 33%); */
 }
@@ -46,7 +48,8 @@
   /* color: hsl(233, 13%, 49%); */
 }
 
-.card button {
+.card button,
+.middleCard button {
   /* color: hsl(0, 0%, 100%); */
   width: 85%;
   padding: 12px;
@@ -56,4 +59,56 @@
   border-radius: 8px;
   letter-spacing: 2.5px;
   font-size: 12px;
+}
+
+@media (min-width: 1440px) {
+  .card {
+    height: 365px;
+    width: 270px;
+  }
+
+  .card > .plan {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  .middleCard {
+    height: 410px;
+    width: 270px;
+  }
+
+  .middleCard > .plan {
+    font-size: 15px;
+    margin-top: 50px;
+  }
+
+  .priceWrapper {
+    padding: 0px 20px 0px 20px;
+  }
+
+  .card span:first-of-type,
+  .middleCard span:first-of-type {
+    font-size: 30px;
+  }
+
+  .price {
+    font-size: 60px;
+  }
+
+  .info {
+    margin: 23px 0px 27px;
+  }
+
+  .info p {
+    font-size: 12px;
+    padding: 12px;
+  }
+
+  .card button,
+  .middleCard button {
+    letter-spacing: 2px;
+    font-size: 10px;
+    padding: 10px;
+    cursor: pointer;
+  }
 }

@@ -10,4 +10,5 @@ export type cardInfo = {
   color2: string;
   color3: string;
   color4: string;
+  cardClass: string;
 };
