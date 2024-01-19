@@ -4,11 +4,13 @@ export type cardInfo = {
   storage: string;
   users: string;
   sendUp: string;
-  bgColor: string;
-  buttonColor: string;
-  color1: string;
-  color2: string;
-  color3: string;
-  color4: string;
   cardClass: string;
 };
+
+export type headerProps = {
+  setIsAnual: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export type anualType = {
+  isAnual: boolean
+}

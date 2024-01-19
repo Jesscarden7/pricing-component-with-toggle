@@ -8,16 +8,38 @@
   margin-top: 30px;
 }
 
+.card {
+  background: hsl(0, 0%, 100%);
+}
+
+.middleCard {
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
 .plan {
   font-size: 18px;
   margin: 30px 0px 22px;
-  /* color: hsl(233, 13%, 49%); */
+}
+
+.card > .plan {
+  color: hsl(233, 13%, 49%);
+}
+
+.middleCard > .plan {
+  color: hsl(240, 78%, 98%);
 }
 
 .card span:first-of-type,
 .middleCard span:first-of-type {
   font-size: 43px;
-  /* color: hsl(232, 13%, 33%); */
+}
+
+.card span:first-of-type {
+  color: hsl(232, 13%, 33%);
+}
+
+.middleCard span:first-of-type {
+  color: hsl(0, 0%, 100%);
 }
 
 .priceWrapper {
@@ -28,7 +50,22 @@
 
 .price {
   font-size: 68px;
-  /* color: hsl(232, 13%, 33%); */
+}
+
+.card > .priceWrapper .price {
+  color: hsl(232, 13%, 33%);
+}
+
+.middleCard > .priceWrapper .price {
+  color: hsl(0, 0%, 100%);
+}
+
+.card > .info p:first-child {
+  border-top: 1px solid hsl(233, 13%, 49%, 0.5);
+}
+
+.middleCard > .info p:first-child {
+  border-top: 1px solid hsl(240, 78%, 98%, 0.5);
 }
 
 .info {
@@ -36,21 +73,24 @@
   width: 85%;
 }
 
-/* .info p:first-child {
-  border-top: 1px solid hsl(233, 13%, 49%, 0.5);
-} */
-
 .info p {
-  /* border-bottom: 1px solid hsl(233, 13%, 49%, 0.5); */
   font-size: 15px;
   text-align: center;
   padding: 15px;
-  /* color: hsl(233, 13%, 49%); */
+}
+
+.card > .info p {
+  color: hsl(233, 13%, 49%);
+  border-bottom: 1px solid hsl(233, 13%, 49%, 0.5);
+}
+
+.middleCard > .info p {
+  color: hsl(240, 78%, 98%);
+  border-bottom: 1px solid hsl(240, 78%, 98%, 0.5);
 }
 
 .card button,
 .middleCard button {
-  /* color: hsl(0, 0%, 100%); */
   width: 85%;
   padding: 12px;
   text-transform: uppercase;
@@ -59,6 +99,16 @@
   border-radius: 8px;
   letter-spacing: 2.5px;
   font-size: 12px;
+}
+
+.card button {
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: hsl(0, 0%, 100%);
+}
+
+.middleCard button {
+  background: hsl(0, 0%, 100%);
+  color: hsl(237, 63%, 64%);
 }
 
 @media (min-width: 1440px) {
@@ -110,5 +160,17 @@
     font-size: 10px;
     padding: 10px;
     cursor: pointer;
+  }
+
+  .card button:hover {
+    background: hsl(0, 0%, 100%);
+    color: hsl(237, 63%, 64%);
+    border: 1px solid hsl(232, 13%, 33%);
+  }
+
+  .middleCard button:hover {
+    background: hsl(237, 63%, 64%);
+    color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 100%);
   }
 }

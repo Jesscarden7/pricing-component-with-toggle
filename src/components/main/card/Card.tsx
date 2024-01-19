@@ -5,36 +5,26 @@ type Props = {
   card: cardInfo;
 };
 
-function Card({ card }: Props) {
-  
-  const bgColor = { background: `linear-gradient(${card.bgColor})` };
-  const borderTop = { borderTop: `1px solid ${card.color3}` };
-  const borderBottom = { borderBottom: `1px solid ${card.color3}` };
-  const color1 = { color: card.color1 };
-  const color2 = { color: card.color2 };
-  const color3 = {color: card.color4};
-  const bgButton = {background: `linear-gradient(${card.buttonColor})`}
+function toFixed(num: number, fixed: number): string {
+  const re = new RegExp(`^-?\\d+(?:\\.\\d{0,${fixed || -1}})?`);
+  const result = num.toString().match(re);
+  return result ? result[0] : "0";
+}
 
+function Card({ card }: Props) {
   return (
-    <div style={bgColor} className={styles[card.cardClass]}>
-      <p style={color1} className={styles.plan}>
-        {card.plan}
-      </p>
-      <div style={color2} className={styles.priceWrapper}>
+    <div className={styles[card.cardClass]}>
+      <p className={styles.plan}>{card.plan}</p>
+      <div className={styles.priceWrapper}>
         <span>$</span>
-        <span className={styles.price}>{card.price}</span>
+        <span className={styles.price}>{toFixed(card.price, 2)}</span>
       </div>
-      <div style={color1} className={styles.info}>
-        <p style={{ ...borderTop, ...borderBottom }}>{card.storage}</p>
-        <p style={borderBottom}>{card.users}</p>
-        <p style={borderBottom}>
-          {card.sendUp}
-        </p>
+      <div className={styles.info}>
+        <p>{card.storage}</p>
+        <p>{card.users}</p>
+        <p>{card.sendUp}</p>
       </div>
-      <button
-        style={{...bgButton, ...color3}}>
-        Learn more
-      </button>
+      <button>Learn more</button>
     </div>
   );
 }
